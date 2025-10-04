@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Serviços Governamentais</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'gov-blue': '#071D41',
+                        'gov-blue-light': '#1351B4',
+                        'gov-green': '#168821',
+                        'gov-yellow': '#FFCD07',
+                        'gov-gray': '#555555'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header>
+        <div class="shadow-md bg-white">
+            <nav class="container mx-auto px-4 py-3 flex items-center justify-between">
+                <img src="logo.png" alt="Governo Federal" class="h-8">
+                <!-- Menu Desktop -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#" class="text-gov-blue-light hover:text-gov-blue transition py-2">Início</a>
+                    <a href="#servicos" class="text-gov-blue-light hover:text-gov-blue transition py-2">Serviços</a>
+                    <a href="#sobre" class="text-gov-blue-light hover:text-gov-blue transition py-2">Sobre</a>
+                    <a href="#contato" class="text-gov-blue-light hover:text-gov-blue transition py-2">Contato</a>
+                </div>
+                <!-- Menu Mobile -->
+                <button class="block md:hidden text-gov-blue-light ml-auto" onclick="toggleMenu()">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </nav>
+            <!-- Menu Mobile Dropdown -->
+            <div id="mobileMenu" class="hidden md:hidden">
+                <div class="container mx-auto px-4 py-2">
+                    <a href="#" class="block py-2 text-gov-blue-light hover:text-gov-blue transition">Início</a>
+                    <a href="#servicos" class="block py-2 text-gov-blue-light hover:text-gov-blue transition">Serviços</a>
+                    <a href="#sobre" class="block py-2 text-gov-blue-light hover:text-gov-blue transition">Sobre</a>
+                    <a href="#contato" class="block py-2 text-gov-blue-light hover:text-gov-blue transition">Contato</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Serviços -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl font-bold text-center mb-12 text-gov-blue">Serviços Disponíveis</h1>
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="p-6">
+                        <h2 class="text-2xl font-bold text-gov-blue mb-6">Selecione o serviço desejado</h2>
+                        <ul class="space-y-4">
+                            <li class="border-b border-gray-200 pb-4">
+                                <a href="checkout.html?titulo=CNH - Primeira Via&valor=180.90" class="flex items-center justify-between group">
+                                    <div>
+                                        <h3 class="text-xl text-gov-blue-light group-hover:text-gov-blue transition">CNH - Primeira Via</h3>
+                                        <p class="text-gov-gray mt-1">Solicite sua primeira Carteira Nacional de Habilitação</p>
+                                    </div>
+                                    <span class="text-gov-blue-light group-hover:translate-x-2 transition-transform">→</span>
+                                </a>
+                            </li>
+                            <li class="border-b border-gray-200 pb-4">
+                                <a href="checkout.html?titulo=CNH - Renovação&valor=180.90" class="flex items-center justify-between group">
+                                    <div>
+                                        <h3 class="text-xl text-gov-blue-light group-hover:text-gov-blue transition">CNH - Renovação</h3>
+                                        <p class="text-gov-gray mt-1">Renove sua Carteira Nacional de Habilitação</p>
+                                    </div>
+                                    <span class="text-gov-blue-light group-hover:translate-x-2 transition-transform">→</span>
+                                </a>
+                            </li>
+                            <li class="border-b border-gray-200 pb-4">
+                                <a href="checkout.html?titulo=CNH - Segunda Via&valor=180.90" class="flex items-center justify-between group">
+                                    <div>
+                                        <h3 class="text-xl text-gov-blue-light group-hover:text-gov-blue transition">CNH - Segunda Via</h3>
+                                        <p class="text-gov-gray mt-1">Solicite a segunda via da sua Carteira Nacional de Habilitação</p>
+                                    </div>
+                                    <span class="text-gov-blue-light group-hover:translate-x-2 transition-transform">→</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="checkout.html?titulo=CNH - Adição de Categoria&valor=180.90" class="flex items-center justify-between group">
+                                    <div>
+                                        <h3 class="text-xl text-gov-blue-light group-hover:text-gov-blue transition">CNH - Adição de Categoria</h3>
+                                        <p class="text-gov-gray mt-1">Adicione novas categorias à sua Carteira Nacional de Habilitação</p>
+                                    </div>
+                                    <span class="text-gov-blue-light group-hover:translate-x-2 transition-transform">→</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Como Solicitar -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gov-blue">Como solicitar o agendamento online?</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="flex justify-center mb-6">
+                        <div class="bg-gov-blue-light/10 p-4 rounded-full">
+                            <svg class="w-8 h-8 text-gov-blue-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-gov-blue mb-4 text-center">Preencha o formulário</h3>
+                    <p class="text-gov-gray text-center">
+                        Clique no botão inicial para ter acesso ao formulário. Preencha os dados até o fim para chegar na tela de pagamento.
+                    </p>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="flex justify-center mb-6">
+                        <div class="bg-gov-blue-light/10 p-4 rounded-full">
+                            <svg class="w-8 h-8 text-gov-blue-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-gov-blue mb-4 text-center">Realize o pagamento</h3>
+                    <p class="text-gov-gray text-center">
+                        Realize o pagamento do pedido. Após compensado o pagamento, irá receber um e-mail de confirmação.
+                    </p>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="flex justify-center mb-6">
+                        <div class="bg-gov-blue-light/10 p-4 rounded-full">
+                            <svg class="w-8 h-8 text-gov-blue-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-gov-blue mb-4 text-center">Receba tudo por e-mail</h3>
+                    <p class="text-gov-gray text-center">
+                        Após o confirmado seu pagamento, iremos entrar em contato por e-mail em até 48 horas úteis.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dúvidas Frequentes -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gov-blue">Dúvidas Frequentes</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="space-y-4">
+                    <!-- Pergunta 1 -->
+                    <div class="border rounded-lg overflow-hidden">
+                        <button class="w-full text-left p-4 bg-white hover:bg-gray-50 focus:outline-none flex justify-between items-center" 
+                                onclick="toggleAccordion('faq1')">
+                            <span class="text-gov-blue-light font-medium">Quanto tempo demora para receber a confirmação do protocolo de agendamento por e-mail?</span>
+                            <svg id="icon1" class="w-5 h-5 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div id="faq1" class="hidden bg-white px-4 pb-4">
+                            <p class="text-gov-gray">O e-mail com a confirmação do protocolo de seu atendimento chega em até 48 horas após a confirmação de pagamento.</p>
+                        </div>
+                    </div>
+
+                    <!-- Pergunta 2 -->
+                    <div class="border rounded-lg overflow-hidden">
+                        <button class="w-full text-left p-4 bg-white hover:bg-gray-50 focus:outline-none flex justify-between items-center"
+                                onclick="toggleAccordion('faq2')">
+                            <span class="text-gov-blue-light font-medium">Depois que agendei já posso ir ao posto de atendimento?</span>
+                            <svg id="icon2" class="w-5 h-5 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div id="faq2" class="hidden bg-white px-4 pb-4">
+                            <p class="text-gov-gray">Não. Só vá ao posto de atendimento com o protocolo de atendimento que enviaremos ao seu e-mail. Este protocolo é a confirmação de que o dia e horário desejado foi devidamente agendado com o posto.</p>
+                        </div>
+                    </div>
+
+                    <!-- Pergunta 3 -->
+                    <div class="border rounded-lg overflow-hidden">
+                        <button class="w-full text-left p-4 bg-white hover:bg-gray-50 focus:outline-none flex justify-between items-center"
+                                onclick="toggleAccordion('faq3')">
+                            <span class="text-gov-blue-light font-medium">Além da taxa de serviço será cobrado mais algum valor?</span>
+                            <svg id="icon3" class="w-5 h-5 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div id="faq3" class="hidden bg-white px-4 pb-4">
+                            <p class="text-gov-gray">Para emissão de 1ª via não há outras taxas. Entretando, se for emissão de 2ª via do documento, será cobrado uma taxa de emissão.</p>
+                        </div>
+                    </div>
+
+                    <!-- Pergunta 4 -->
+                    <div class="border rounded-lg overflow-hidden">
+                        <button class="w-full text-left p-4 bg-white hover:bg-gray-50 focus:outline-none flex justify-between items-center"
+                                onclick="toggleAccordion('faq4')">
+                            <span class="text-gov-blue-light font-medium">Posso desistir após pagar?</span>
+                            <svg id="icon4" class="w-5 h-5 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div id="faq4" class="hidden bg-white px-4 pb-4">
+                            <p class="text-gov-gray">Sim! Caso o serviço ainda não tenha sido realizado, basta entrar em contato em nossos canais de atendimento que faremos o estorno.</p>
+                        </div>
+                    </div>
+
+                    <!-- Pergunta 5 -->
+                    <div class="border rounded-lg overflow-hidden">
+                        <button class="w-full text-left p-4 bg-white hover:bg-gray-50 focus:outline-none flex justify-between items-center"
+                                onclick="toggleAccordion('faq5')">
+                            <span class="text-gov-blue-light font-medium">Posso realizar o agendamento sem a assessoria do site?</span>
+                            <svg id="icon5" class="w-5 h-5 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div id="faq5" class="hidden bg-white px-4 pb-4">
+                            <p class="text-gov-gray">Não. Este é o único canal oficial para realizar o agendamento dos seus documentos. Para sua segurança e garantia do serviço, realize o agendamento somente através deste portal governamental.</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gov-blue text-white py-12 mt-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col items-center text-center">
+                <img src="logo.png" alt="Governo Federal" class="h-12 mb-8">
+                <div>
+                    <p class="text-lg mb-2">Portal Oficial do Governo Federal</p>
+                    <p class="text-sm opacity-80">Ministério da Gestão e da Inovação em Serviços Públicos</p>
+                </div>
+            </div>
+            <div class="border-t border-blue-400 mt-8 pt-8 text-center">
+                <p>Governo Federal - 2025. Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Função para pegar todos os parâmetros da URL atual
+        function getUrlParams() {
+            const urlParams = new URLSearchParams(window.location.search);
+            let params = {};
+            for (const [key, value] of urlParams.entries()) {
+                if (key !== 'titulo' && key !== 'valor') {
+                    params[key] = value;
+                }
+            }
+            return params;
+        }
+
+        // Função para adicionar parâmetros aos links do checkout
+        function addParamsToCheckoutLinks() {
+            const params = getUrlParams();
+            const checkoutLinks = document.querySelectorAll('a[href^="checkout.html"]');
+            
+            checkoutLinks.forEach(link => {
+                const currentUrl = new URL(link.href);
+                const currentParams = new URLSearchParams(currentUrl.search);
+                
+                // Adicionar parâmetros existentes da URL atual
+                for (const [key, value] of Object.entries(params)) {
+                    currentParams.append(key, value);
+                }
+                
+                link.href = `checkout.html?${currentParams.toString()}`;
+            });
+        }
+
+        // Executar quando a página carregar
+        document.addEventListener('DOMContentLoaded', addParamsToCheckoutLinks);
+
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        function toggleAccordion(id) {
+            const content = document.getElementById(id);
+            const icon = document.getElementById('icon' + id.slice(-1));
+            
+            // Fecha todos os outros accordions
+            document.querySelectorAll('[id^="faq"]').forEach(el => {
+                if (el.id !== id && !el.classList.contains('hidden')) {
+                    el.classList.add('hidden');
+                    const otherIcon = document.getElementById('icon' + el.id.slice(-1));
+                    otherIcon.classList.remove('rotate-180');
+                }
+            });
+            
+            // Abre/fecha o accordion clicado
+            content.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        }
+    </script>
+</body>
+</html>
